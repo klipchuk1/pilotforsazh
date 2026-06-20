@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Форсаж — Проект завершён</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #0a0a0f;
+      color: #f0f0ff;
+      font-family: 'Rajdhani', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    /* Фоновые частицы */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 20% 50%, rgba(255,51,102,0.06) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 20%, rgba(0,212,255,0.06) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 80%, rgba(168,85,247,0.04) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .container {
+      text-align: center;
+      padding: 40px 24px;
+      max-width: 600px;
+      width: 100%;
+      position: relative;
+    }
+
+    .logo {
+      font-family: 'Orbitron', sans-serif;
+      font-size: clamp(42px, 10vw, 80px);
+      font-weight: 900;
+      letter-spacing: 8px;
+      background: linear-gradient(180deg, #ffffff 0%, #dce8f0 20%, #9ab0cc 45%, #6680aa 60%, #7755aa 80%, #ff5500 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      filter: drop-shadow(0 0 24px rgba(255,85,0,0.35));
+      margin-bottom: 8px;
+      animation: fadeInDown 0.8s ease both;
+    }
+
+    .divider {
+      width: 120px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #ff3366, #00d4ff, transparent);
+      margin: 20px auto 28px;
+      animation: fadeIn 1s ease 0.3s both;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(0, 212, 255, 0.08);
+      border: 1px solid rgba(0, 212, 255, 0.25);
+      border-radius: 100px;
+      padding: 6px 20px;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      color: #00d4ff;
+      margin-bottom: 32px;
+      animation: fadeIn 1s ease 0.5s both;
+    }
+
+    .headline {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: clamp(20px, 5vw, 30px);
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: #f0f0ff;
+      margin-bottom: 16px;
+      animation: fadeIn 1s ease 0.6s both;
+    }
+
+    .sub {
+      font-size: 16px;
+      font-weight: 400;
+      color: #8888aa;
+      line-height: 1.6;
+      letter-spacing: 0.5px;
+      animation: fadeIn 1s ease 0.8s both;
+    }
+
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      margin: 40px 0;
+      flex-wrap: wrap;
+      animation: fadeIn 1s ease 1s both;
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat-value {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 28px;
+      font-weight: 900;
+      color: #ffd600;
+      display: block;
+    }
+
+    .stat-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      color: #8888aa;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+
+    .finish-line {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 40px;
+      animation: fadeIn 1s ease 1.2s both;
+    }
+
+    .checkered {
+      width: 36px;
+      height: 36px;
+      background-image:
+        repeating-conic-gradient(#fff 0% 25%, #333 0% 50%);
+      background-size: 9px 9px;
+      border-radius: 4px;
+      opacity: 0.7;
+    }
+
+    .finish-text {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      color: #ffd600;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">ФОРСАЖ</div>
+    <div class="badge">ПИЛОТНЫЙ ПРОЕКТ</div>
+    <div class="divider"></div>
+
+    <div class="headline">Проект успешно завершён</div>
+    <div class="sub">
+      Платформа геймификации продаж «Форсаж»<br>
+      отработала пилотный этап. Спасибо всем участникам!
+    </div>
+
+    <div class="stats">
+      <div class="stat">
+        <span class="stat-value">3</span>
+        <span class="stat-label">Этапа гонки</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">1 350</span>
+        <span class="stat-label">Торговых точек</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">2026</span>
+        <span class="stat-label">Год</span>
+      </div>
+    </div>
+
+    <div class="finish-line">
+      <div class="checkered"></div>
+      <div class="finish-text">FINISH</div>
+      <div class="checkered"></div>
+    </div>
+  </div>
+</body>
+</html>
